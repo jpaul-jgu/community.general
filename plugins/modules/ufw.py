@@ -623,3 +623,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Source: https://gitlab.com/dhj/easyufw/-/blob/master/easyufw.py?ref_type=heads#L21-29
+# >>> import ufw.frontend
+# >>> import ufw.common
+# >>> import gettext
+# >>>
+# >>> progName = ufw.common.programName
+# >>> gettext.install(progName)#, unicode=True) # for i18n; fixes '_' not defined
+# >>> ui = ufw.frontend.UFWFrontend(False) # no dryrun -- do it live
+# >>> backend = ui.backend
+# >>> backend.get_rules()
+# >>> backend.get_rules()[1]
+# >>> dir(backend.get_rules()[1])
+# >>> backend.get_rules()[1].dst
+# '0.0.0.0/0'
+# >>> backend.get_rules()[1].v6
+# False
